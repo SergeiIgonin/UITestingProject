@@ -1,4 +1,4 @@
-name:
+name: Automated WEB UI tests
 
 on:
   workflow_dispatch:
