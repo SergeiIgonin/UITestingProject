@@ -14,7 +14,7 @@ pytest -vm "smoke"
 ```
 3. Запуск всех автотестов (17 шт.) в браузере chrome или firefox с указанием языка интерфейса (опционально).
 
-    *(i) headless-режим можно отключить в conftest.py убрав эту опцию*
+    *(i) headless-режим можно отключить в conftest.py закомментировав опцию '--headless=new'*
 ```bash
 pytest -sv --browser_name=chrome --language=ru
 ```
@@ -23,6 +23,7 @@ pytest -sv --browser_name=firefox --language=en
 ```
 *(i) также можно указать любой другой поддерживаемый язык: es для испанского, fr для французского
 (по умолчанию выставлены chrome, en)*
+
 4. Запуск всех тестов с генерацией и просмотром allur-отчета по итогам прогона тестов (выполнять поочередно):
 ```bash
 pytest -v --alluredir=allure-results
@@ -44,5 +45,5 @@ allure-results из которой можно сгенерировать allure-
 ```bash
 allure serve allure-results 
 ```
-6. Для запуска тестов удаленно на  GitHub откройте там данный репозиторий, перейдите во вкладку "Actions", откройте Actions
-**"Automated WEB UI tests"**, выберите и запустите один из четырех вариантов workflow.
+6. Для запуска тестов удаленно на виртуальных машинах GitHub перейдите во вкладку "Actions" данного репозитория, выберите Actions
+**"Automated WEB UI tests"**, затем выберите и запустите один из четырех вариантов workflow.
