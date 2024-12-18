@@ -4,8 +4,9 @@
 # 3. для просмотра Allure-отчета выполнить: allure serve allure-results
 
 FROM python:3.10-alpine3.19
-COPY . .
-RUN mkdir allure-results
+WORKDIR usr/workspace
+COPY . usr/workspace
 RUN apk add --no-cache chromium chromium-chromedriver tzdata
 RUN pip install -r requirements.txt
+RUN mkdir usr/workspace/allure-results
 CMD ["pytest", "-v", "tests", "--alluredir=allure-results"]
