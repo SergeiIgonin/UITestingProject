@@ -2,7 +2,7 @@ import pytest, allure
 from base.base_test import BaseTest
 
 
-@allure.feature("Login page Functionality")
+@allure.epic("Login page Functionality")
 class TestLoginPage(BaseTest):
     @allure.title('Проверка наличия на странице логина форм регистрации и авторизации')
     @allure.severity("Critical")

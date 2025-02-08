@@ -2,7 +2,7 @@ import pytest, allure
 from base.base_test import BaseTest
 
 
-@allure.feature("Main page Functionality for guest")
+@allure.epic("Main page Functionality for guest")
 @pytest.mark.login_guest
 class TestLoginFromMainPage(BaseTest):
     @allure.title('Проверка наличия для гостя на главной странице ссылки для перехода на страницу логина')

@@ -4,7 +4,7 @@ from config.links import Links
 offers = Links.offers
 
 
-@allure.feature("Product page Functionality for guest")
+@allure.epic("Product page Functionality for guest")
 @pytest.mark.like_guest
 class TestGuestAddToCartFromProductPage(BaseTest):
     @allure.title('Проверка отсутствия для гостя на странице товара сообщения об успехе до того, как товар добавлен в корзину')
@@ -70,7 +70,7 @@ class TestGuestAddToCartFromProductPage(BaseTest):
         self.cart_page.make_screenshot("Success")
 
 
-@allure.feature("Product page Functionality for user")
+@allure.epic("Product page Functionality for user")
 @pytest.mark.like_user
 class TestUserAddToCartFromProductPage(BaseTest):
     @allure.title('Проверка возможности пользователю добавить товар в корзину')
