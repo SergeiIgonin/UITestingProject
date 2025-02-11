@@ -5,4 +5,4 @@ class Data:
 
     f = faker.Faker()
     EMAIL = f.email()
-    PASSWORD = f.password(length=8)
+    PASSWORD = f.password(length=9)
